@@ -240,3 +240,6 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+# Strangely generated file
+comment.cut
