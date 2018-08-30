@@ -1,6 +1,6 @@
 default: anonymous.pdf csc32x.pdf
 
-%.pdf: %.tex %.bib abstract.tex body.tex
+%.pdf: %.tex %.bib *.tex
 	pdflatex $*
 	bibtex $*
 	pdflatex $*
