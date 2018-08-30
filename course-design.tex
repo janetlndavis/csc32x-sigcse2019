@@ -1,0 +1,258 @@
+asection{Course design}
+
+Because of these issues, in spring 2013 we undertook a complete
+redesign of the course.  In developing the new version, we kept a
+variety of core goals in mind.  The software design course serves
+two major roles in the curriculum: It introduces students to the
+skills and principles that allow them to contribute to medium and
+large scale projects and it gives them the experience of working
+on a larger project than they typically encounter in other courses.
+
+Within that framework, we had a variety of other goals.  We wanted
+to provide students with a more realistic design experience, one more
+akin to what they would encounter after college.  We know students
+are more successful when they are invested in their projects, so we
+wanted projects whose benefit they understood.  We wanted to help
+students build not only technical skills, but also so-called ``soft
+skills''.  
+
+And, to be honest, we wanted a course that students rated more highly.
+
+\subsection{Primary course characteristics}
+
+These goals led us to a variety of design decisions for the course.
+
+\subsubsection{Multi-semester projects}
+
+We had traditionally focused on projects that students could complete
+in one semester.  Full-semester projects are clearly more substantial
+than the typical class project.  However, full-semester projects
+in a four-credit class are still substantially smaller than the
+projects students encounter after college; the limitation that "it
+must be completed in a semester" seems, well, artificially limiting.
+In addition, most student projects, like most real-world projects,
+take more time than anticipated.  For students, this often leads
+to an end of semester in which they struggle to finish something
+and, whatever they finish, it often feels like less than they wanted.
+
+We decided that adopting multi-semester projects would not only
+give students a more realistic experience but would also help
+alleviate some of the end-of-semester stress and frustation.  Since
+students often join projects in the middle, the have the more common
+experience of needing to understand and find ways to contribute to
+an existing code base.  Since there is not an expectation that
+students finish the project by the end of the semester, we alleviate
+some of the stress students typically feel.
+
+\subsubsection{Community non-profits as project partners}
+
+In determining the kinds of projects we would use, we decided to
+focus on local non-profit institutions.  One of us had recently
+completed a moderate-scale project for a local organization and it
+was clear that many similar organizations in our community also had
+needs for custom software.  We decided early on that we would focus
+on non-mission-critical software; we did not want project slippage
+or failed design to negatively impact these community partners.
+
+But there's still a significant need for non-mission-critical software.
+As one partner put it, ``There are a lot of programs that would make
+our work easier, but that we can't afford and that would still need
+customization.  Knowing that we might eventually get some of that
+software is a huge benefit.''  That knowledge also appears to make the
+partners patient when a project takes longer than even we expect, or
+when we have to put a project on hold for unexpected reasons. So the
+projects provide real value to our partners.
+
+At the same time, these projects provide value to our students.  They
+regularly note that it feels much more rewarding to know that they are
+making software that others will use and that will benefit our community,
+particularly when compared to the projects that they do for other classes,
+which they think of as primarily for themselves or their professor.
+
+Of course, not all projects get finished.  And some that get finished
+still don't get adopted.  In those cases, our partner in the 
+career-development offices regularly reminds students that the
+partner non-profits still received benefit from the \textit{process};
+thinking carefully about requirements and developing workflows can
+sometimes be as important as the software itself.
+
+In the four years of the course, we have partnered with a wide
+variety of non-profits, including an umbrella ``back office'' that
+serves many nonprofits in our community, two different food banks,
+a local no-kill animal shelter, a retirement community, a
+pre-kindergarten program, a retirement home, a sexual assualt support
+group, and a county-wide service organization.  These organizations
+have presented us with a wide spectrum of projects.
+
+\subsubsection{Ruby on Rails}
+
+Supporting a wide variety of multi-semester projects suggested that
+we should use a single language and platform for all the
+projects.\footnote{We did try adding a second platform in two
+semesters; that ended up making the work of both faculty and students
+much more complex.}  Although students in our program already knew
+a variety of languages, including Java, we decided to use Ruby on
+Rails as the primary platform.  We saw many advantages to this
+platform: Rails embraces a model-view-controller framework that we
+consider it important to master; when things go right, Ruby on Rails
+provides an efficient and straightforward development environment;
+a large number of modules for common tasks (aka ``gems'') are
+available, which gives students not only a more efficient development
+pathway, but also a more realistic development process; Ruby
+provides a very different model of object-oriented programming than
+does Java, which helped students broaden their understanding of
+object-oriented design; and there are a wide array of resources for
+helping students learn software design with Ruby, including many
+that are available for free or at low cost (e.g.,
+\cite{saasbook,rails-tutorial}).
+
+However, the use of Ruby on Rails did not come without other costs.  In
+particular, it meant that we had to devote a non-trivial amount of
+time during the semester teaching students both Ruby and Rails, time
+which delayed the potential start of their projects.
+
+\subsubsection{Alumni mentors}
+
+Students engaging in a large project benefit from a variety of kinds
+of mentoring.  They need advice on design.  They need advice on
+which libraries (gems) are available and which will best serve their
+project.  They need help navigating the complexities of working
+with a non-technical partner.  In many cases, they need ways to
+handle the ambiguities inherent in building new software, from
+forming appropriate requirements to handling unexpected and
+unexplicable bugs.
+
+While we have a successful peer mentoring program within the department,
+we decided that the students would be better served by alumni mentors
+who had significant experience developing software in Ruby on Rails.
+Ruby on Rails is a complex enough ecosystem, and one that evolves
+frequently enough, that it was unlikely that either we or the class
+mentor would have as comprehensive knowledge as someone who uses
+it daily.  It was clear that alumni mentors would give students a
+broader sense of how their class practice reflected actual industry
+practice; it's one thing to hear from a faculty member that a
+technique or approach is useful, it's another to hear it from someone
+who uses the technique or approach in their regular work.  The
+alumni mentors also provide an opportunity for students to consider
+what their life might be like after college.  Many mentors have
+dealt with the complexity of non-technical clients and Brovided a
+resource for students struggling with those issues.  By relying on
+remote alumni mentors, we would give students the experience of
+working with others who are not physically present.  Finally, the
+cohort of alumni mentors can often serve as a broader ``panel of
+advisors'' to all projects.
+
+Of course, having alumni mentors also helps build connections between
+the alumni and the college.  We hear regularly from our Office of
+Alumni Relations that many alumni clamor for more opportunities to
+help support students.
+
+\subsubsection{Partnering with the career-development office}
+
+Because the software design course naturally connects to their
+post-college work and because working with a non-technical partner
+requires a very different skillset, we partnered with the 
+career-development office to present in class at the beginning
+fo the semester.
+of the semester. 
+
+For the first two years of the course, a member of that office
+joined the class to give the students a personal characteristic
+inventory, such as Myers-Briggs or Strengths Finder, and to work
+with the students to help them explore the meanings of their results.
+They also helped the students understand how the different
+characteristics affected their groups and then benefits of building
+groups with multiple talents.  Although we discontinued the use of
+these instruments based on some discussions with our colleages in
+the Psychology department, we continue to use some of the ideas in
+helping students think about the diversity of skills necessary for
+a successful group.
+
+More importantly, a member of the office helps the students understand
+the complexities and subtleties of working in our community.  We
+are fortunate that our career development office has a community
+outreach coordinator who can speak not only to issues of professionalism,
+but also to broader issues of our community.  The discussion touches
+on a broad variety of issues, including socio-economic status\footnote{For
+example, students are surprised to hear that while the unemployment
+rate in town is at about 3%, over one-third of students in our
+school district are eligible for free or reduced lunches.}, network
+access\footnote{Students are surprised to hear that for many families,
+broadband is not a possibiilty and cell-phone data is their primary
+connection to the Internet}, biases townspeople have about college
+students, and biases the students have about the townspeople.
+
+Most importantly, our coordinator helps tease out issues through interactive
+discussion.  Here are some exmaples from a typical class session.
+
+\newcommand{\question}[1]{\textsl{#1}}
+\newcommand{\answer}[1]{#1}
+\newcommand{\followup}[1]{\textsl{#1}}
+
+\question{You want to be professional in your conversations with your client.  Should you contact your client via text messages?}
+\answer{No, of course not.}
+\followup{Actually, it depends on the particular partners.  You'll find that some of our partners actually prefer text messages.  It lets them easily group the messages and reply to them on their own timeframe.  In the end, the most important thing is that you understand that clients' preferred mode of communication.}
+
+\question{What about clothes?  Should men wear a button-down shirt and a tie to meetings?}
+\answer{That seems professional.}
+\followup{Once again, it depends on who you are meeting with.  If you to a meeting with farmers on their farm, and wear dress shoes and a button-down shirt and tie, they may think that you are setting yourself above them, that you are not very sensible, or both.}
+
+% Should we insert some more?
+
+\subsubsection{Course structure}
+
+Traditionally, the software design course has been offered as a single
+four-credit course that included both the principles and practices and
+the project component.  We decoupled the two halves.  That is, we 
+offered a paired two-credit course in principles and practices and
+a separate two-credit ``practicum'' in which the students apply
+those principles and practices to a project with community partners.
+
+The primary intention was to make it easier for students to repeat
+the practicum, either working on a project for multiple semesters
+or joining different projects in different stages of compleition.
+However, there were a host of other potential benefits.  For some
+students, it made it easier to put together a plan; particularly
+for students who started the major late or who were completing two
+majors, it became possible to add an extra course to their plan by
+converting two sixteen-credit semesters to two eighteen-credit
+semesters (taking principles and practices the first semester and
+the practicum the second semester).  Some students who felt particularly
+overwhelmed in a semester or needed to focus on extra-curricular activities
+could drop to a fourteen-credit semester.
+
+At the same time, we also started to offer additional two-credit
+courses in other areas, making it possible for students to combine
+one of the software design half-courses with an elective.
+
+\subsubsection{An affiliated MOOC/SPOC}
+
+After making most of the design decisions described above, we were
+fortunate to discover that Fox and Patterson had released not only
+a textbook \cite{saasbook} but also an affiliated MOOC (Massive,
+Open, Online Course).  Through some negotiations, we were able to
+get an affiliated SPOC (Small, Personalized, Online Course) craeated.
+In addition to providing us with a wealth of resources for the
+course, this SPOC model gave students the opportunity to explore
+online learn, one of the models of learning that they will likely
+need to employ after college.  Through assignments that asked them
+to compare their experience reading the textbook and watching one
+of the associated recorded lectures, we were able to help students
+think about mechanisms of learning that best serve them.\footnote{Many also
+appreciated our instructions to watch the video lecture with no distractions
+and with a notebook in hand.}
+
+%\subsection{Projects}
+%
+%In building an online directory for a retirement community, students
+%found themselves exploring issues of accessibility (e.g., elderly
+%have different needs than more traditional computer users), privacy,
+%control, and more.
+%
+%In developing grant management software for the umbrella organization,
+%students learned about the ad-hoc solutions that organizations may employ
+%when software is too expensive and considered ways to manage files and
+%maintain privacy in cloud storage.
+%
+% Yeah, I probably need to add a few more.
+%
