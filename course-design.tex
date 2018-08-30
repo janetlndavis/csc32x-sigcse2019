@@ -26,15 +26,20 @@ In determining the kinds of projects we would use, we decided to
 focus on local non-profit organizations.  One of us had recently
 completed a moderate-scale project for a local organization and it
 was clear that many similar organizations in our community also had
-needs for custom software.  We decided early on that we would focus
+needs for custom software.  This approach resontated with an 
+instutional efforts around service learning.
+We use the term ``partner'' to emphasize the importance of
+reciprocity in which both students and partner organizations gain from 
+the relationship.~\footnote{Using this term rather than ``client'' 
+also avoids confusion, because most of our partner organizations have their own 
+clients.}
+
+We decided early on that we would focus
 on non-mission-critical software; we did not want schedule slippage
 or poor design to negatively impact these community partners.
-
 But there's still a significant need for non-mission-critical software.
-As one partner~\footnote{We use the term ``partner'' to emphasize the
-reciprocity of the relationship.  Using this term rather than ``client'' 
-also avoids confusion because most partner organizations have their own 
-clients.} put it, ``There are a lot of programs that would make
+As one partner
+put it, ``There are a lot of programs that would make
 our work easier, but that we can't afford and that would still need
 customization.  Knowing that we might eventually get some of that
 software is a huge benefit.''  
@@ -64,22 +69,22 @@ projects students encounter after college.
 Projects of meaningful scope, substantial enough to be useful to 
 partner organizations, do not necessarily fit into one semester. 
 In addition, most student projects, like most real-world projects,
-take more time than anticipated.  For students, this often leads
-students to struggle to finish something by the end of the semester and 
+take more time than anticipated~\cite{fox-2014}.  
+Students often struggle to finish something by the end of the semester and 
 feel unsatisfied with what they complete.
-Finally, even if a project is completed and adopted, 
+Furthermore, even if a project is completed and adopted, 
 users may need further improvements to the software, a burden 
 which often falls on course instructors.
 
 Inspired by Engineering Projects in Community Service (EPICS) at 
 Purdue University~cite{coyle-2005}, 
-we decided that adopting multi-semester projects would not only 
+we decided to adopt multi-semester projects.
+This would not only 
 allow projects to expand to their natural scope, but also
 give students a more realistic experience and help
 alleviate some of the end-of-semester stress and frustration.  Since
-students often join projects in the middle, the have the more common
-experience of needing to understand and find ways to contribute to
-an existing code base.  Since there is not an expectation that
+students often join projects in the middle, they gain experience reading
+and extending legacy code.  Since there is not an expectation that
 students finish the project by the end of the semester, we alleviate
 some of the stress students typically feel. Finally, continuing projects
 over multiple semesters takes some of the burden of 
@@ -116,15 +121,15 @@ Some students who felt particularly
 overwhelmed in a semester or needed to focus on extra-curricular activities
 could drop to a fourteen-credit semester.
 
-At the same time, we also started to offer additional two-credit
-courses in other areas, making it possible for students to combine
+At the same time, we started to offer other two-credit
+courses, making it possible for students to combine
 one of the software design half-courses with an elective.
 
 \subsubsection{Alumni mentors}
 
 Students engaging in a large project benefit from a variety of kinds
 of mentoring.  They need advice on design.  They need advice on
-which libraries are available and which will best serve their
+what libraries are available and which will best serve their
 project.  They need help navigating the complexities of working
 with a non-technical partner.  In many cases, they need ways to
 handle the ambiguities inherent in building new software, from
@@ -164,17 +169,12 @@ requires a very different skillset, we partnered with the
 career-development office to present in class at the beginning
 of the semester. 
 
-For the first two years of the course, a member of that office
-joined the class to give the students a personal 
-inventory, such as Myers-Briggs or Strengths Finder, and to work
+We invited a member of that office to administer a personal
+inventory, such as Myers-Briggs or Strengths Finder, and work
 with the students to help them explore the meanings of their results.
 They also helped the students understand how the different
 characteristics affected their groups and then benefits of building
-groups with multiple talents.  Although we discontinued the use of
-these instruments based on some discussions with our colleagues in
-the Psychology department, we continue to use some of the ideas in
-helping students think about the diversity of skills necessary for
-a successful group.
+groups with multiple talents. 
 
 More importantly, a member of the office helps the students understand
 the complexities and subtleties of working in our community.  We
@@ -192,6 +192,7 @@ students, and biases students have about the townspeople.
 
 Most importantly, our coordinator helps tease out issues through interactive
 discussion.  Here are some examples from a typical class session.
+
 
 \newcommand{\question}[1]{\textsl{#1}}
 \newcommand{\answer}[1]{#1}
@@ -223,6 +224,7 @@ and won't want to schedule more than a few days in advance.  Just make
 sure that you learn what is best for your client.}
 
 % Should we insert some more? No, it's already too long.
+% Is this something we could summarize? Or cut one part?
 
 \subsubsection{Ruby on Rails}
 
@@ -231,7 +233,7 @@ we should use a single language and platform for all the
 projects.\footnote{We did try adding a second platform in two
 semesters; that ended up making the work of both faculty and students
 much more complex.}  Although students in our program already knew
-a variety of languages, including Java, we decided to use Ruby on
+several languages, including Java, we decided to use Ruby on
 Rails as the primary platform.  We saw many advantages to this
 platform: Rails embraces a model-view-controller framework that we
 consider it important to master; Rails is an ``opinionated'' framework 
@@ -251,12 +253,12 @@ that are available for free or at low cost (e.g.,
 However, the use of Ruby on Rails did not come without other costs.  In
 particular, it meant that we had to devote a non-trivial amount of
 time during the semester teaching students both Ruby and Rails, time
-which delayed the potential start of their projects.a
+which delayed the potential start of their projects.
 
 \subsubsection{Agile project management}
 
 Like many others, we chose to have students manage their project using an 
-agile approach.  The advantages are many.  A few particularly stood out
+agile approach.  A few advantages particularly stood out
 for this course: User stories are an accessible way to communicate
 requirements for non-technical partners, as well as students. 
 The product manager role provides a consistent point of contact for partner 
@@ -264,16 +266,16 @@ organizations.
 Many students were already comfortable with pair programming from our 
 introductory sequence, and embraced the 
 practice of working together in the same room.
-Iteration demos 
-hold students accountable on a regular basis.  Iteration retrospectives
-provide a structured opportunity for students to reflect on their experiences
-and change their practices.  Since several two-week iterations fit into a 
-semester, there are several such opportunities for learning.
+Iteration demos hold students accountable on a regular basis.  
 We also had students estimate story points, which allowed them to assess 
 their own pace and progress by measuring velocity for each iteration.
+Iteration retrospectives provide a structured opportunity for students 
+to reflect on their experiences and change their practices.  
+Since several two-week iterations fit into a 
+semester, there are several such opportunities for learning.
 
 One particularly useful idea is that of time-boxing.
-As all of us know, projects expand to fill more than available time.
+As we all know, projects expand to fill more than available time.
 Particularly since the original model of the course was a two-credit
 project course, we made it clear to students that we were not expecting
 a particular product by a particular date; our focus was instead on the
@@ -291,7 +293,7 @@ fortunate to discover that Fox and Patterson had released not only
 a textbook \cite{saasbook} but also an affiliated MOOC (Massive,
 Open, Online Course).  We were invited to participate through
 an affiliated SPOC (Small, Personalized, Online Course).
-In addition to providing us with a wealth of resources for the
+In addition to providing a wealth of resources for the
 course--particularly for Ruby on Rails and agile project management--this
 SPOC model gave students the opportunity to explore
 online learning, one of the models of learning that they will likely
