@@ -246,3 +246,6 @@ comment.cut
 
 # vi temp files
 *.swp
+
+# .txt files (these are generally cruft and should be added manually
+*.txt
