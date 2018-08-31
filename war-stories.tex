@@ -1,144 +1,134 @@
 \section{War stories}
 
-Of course, not everything in the course went smoothly.  In this section,
-we describe some of the more significant problems that arose throughout
-the years and suggest some lessons that each reveals.
+Of course, not everything in the course goes smoothly.  In this section,
+we describe some illustrative problems we've encountered and suggest
+some lessons each reveals. 
 
 \subsection{Revealing an AWS key}
 
-Students use Git to manage their projects.  The course
-generally expands their understanding and usage of Git; most move
+We ask Students to use Git to manage their projects.  While many
+have prior experience with Git, the course
+frequently expands their understanding and usage of Git; most move
 from a single branch to using multiple branches, and from pushing
 to sending pull requests.  Because many students had learned Git
-informally before the class and because the Internet is full of
-mediocre advice, some students employ poor Git practices.
-For example, there is a group of students who seem to have learned
-to write \texttt{git add .; git commit}.\footnote{That is, add any
-new or changed files in or below the current directory and commit
-those files to the repository.}  As one might expect, that leads
-to some inappropriate materials being added to public repositories.
+informally and because the Internet is full of mediocre advice,
+some students employ poor Git practices.  For example, there is a
+group of students who frequently write ``\texttt{git add .; git
+commit}.\footnote{That is, add any new or changed files in or below
+the current directory and commit those files to the repository.}''
+As one might expect, that leads to some inappropriate materials in
+their public repositories.
 
-We discovered one such example indirectly and unpleasantly.  The
-instructor received a call from Amazon.com asking,
-``Do you realize that \$5,000 has been charged to your AWS
-account in the past two days?''\footnote{During development, the
-instructor had allowed the students to set up an AWS account and
-to use his credit card.}  It appears that students joining a project
-in the second semester had ignored their predecessor's instructions
-and had put the AWS key in a public repository.  Since
-there are people who regularly scrape public repositories for such
+We discovered one such example indirectly.  The instructor received
+a call from Amazon.com asking, ``Do you realize that \$5,000 has
+been charged to your AWS account in the past two days?''\footnote{During
+development, the instructor had allowed the students to set up an
+AWS account and to use his credit card.}  It appears that students
+joining a project in the second semester had ignored their predecessor's
+instructions and had put the AWS key in a public repository.  Since
+there some applications regularly scrape public repositories for such
 keys, it took little time for the now-public key to be found and
-used.  Fortunately, an Amazon employee had also found the
-key in the repository, was sympathetic, and waived the charge.
+used.\footnote{Fortunately, an Amazon employee noted that Amazon
+had also found the key in the repository, was sympathetic, and
+waived the charge.}
 
 That experience proved instructive not just for that semester's
-students but for subsequent students, who were told that any
-further such occurrences would be their financial responsibility.
-
-Students learned not only that there are consequences when
-information is inappropriately revealed, but also such experiences
-are not uncommon.
-The more important lessons were about the
-technical and nontechnical issues involved in keeping some information
-private in a project that is primarily public.
-Students needed to figure out technical issues, such as how
-to update the \texttt{.gitignore} file to ensure that the key would
-not be included, even by someone new to the project who uses `git
-add .`, how to configure the system to read that key from an
-environment variable, and how to set environment variables in a
-platform like Heroku.  But they also needed to decide on practices.
-For example, how do you share a private key among group members without
-accidentally revealing it to others?  While there are some common practices,
-and any organization they joined would have a specific practice, we saw
-value in letting students think through the issue on their own and
-compare alternative strategies.
+students but also for subsequent students.  Students learned not
+only that there are consequences when the inappropriately reveal
+information, but also that such experiences are not uncommon.  The
+more important lessons were about the technical and nontechnical
+issues involved in keeping some information private in a project
+that is primarily public.  Students needed to figure out technical
+issues, such as how to update the \texttt{.gitignore} file to ensure
+that the key would not be included, even by someone new to the
+project who follows poor Git practices, how to configure the system to read
+that key from an environment variable, and how to set environment
+variables in a platform like Heroku.  But they also needed to decide
+on practices.  For example, how do you share a private key among
+group members without accidentally revealing it to others?  While
+there are some common practices, and any organization they joined
+would have standards, we saw value in letting students think through
+the issue on their own and compare alternative strategies.
 
 \subsection{Revealing personal information}
 
-The lazy Git practice from the prior war story has been at play
-in other problematic situations, too.  One group, while developing
-an online directory for a local retirement community, accidentally
-included photographs of all the residents in their public GitHub
-repository.  In addition to the obvious privacy issues, adding a
-large number of photographs also significantly increases the download
-time for cloning the repository.
+Lazy Git practice has also created other problems.  One group, while
+developing an online directory for a local retirement community,
+accidentally included photographs of all the residents in their
+public GitHub repository.  In addition to the obvious privacy issues,
+adding a large number of photographs also significantly increases
+the download time for cloning the repository.
 
-Fortunately, we caught this problem before any
-personal information was revealed.\footnote{It helps that the photos
-were all in a single zip file.}  But students then had the larger
-problem of learning how to ``scrub'' a GitHub repository: beyond
-removing the photographs from the repository, it's
-essential to remove the photographs from the history of the
-repository.  Unfortunately, scrubbing repositories ended up being
-beyond student capabilities and required instructor intervention.
+Fortunately, we caught this problem before any personal information
+was revealed.\footnote{It helps that the photos were all in a single
+zip file.}  Students had to learn how to ``scrub'' a GitHub repository:
+beyond removing the photographs from the repository, it was essential
+for them to remove the photographs from the repository's history.
 
-Among other things, this instance highlighted an issue that students
-regularly struggle with: The overall structure of the project should
-be public so that others can adapt or adopt it, but some portions
-need to be custom for the client.  How do you appropriately separate the
-two?  Admittedly, this remains an issue that students struggle with;
-too often, they consider the two aspects of the project together,
-rather than separately.
+This experience highlighted an issue that students regularly struggle
+with: The overall structure of the project should be public so that
+others can adapt or adopt it, but some portions need to be custom
+for the client.  How do you appropriately separate the two?
+Admittedly, this remains an issue that students struggle with; too
+often, they consider the two aspects of the project together, rather
+than separately.  We continue to draw on the example in helping them
+reflect on this design issue.
 
 \subsection{Changes in management}
 
-We experienced multiple mangement changes in our partner organizations.
-Often, the new manager has a
-very different view of what the project should do.  In one case,
-the initial project request was for a group text-messaging system
-with a Web interface.  We'd been surprised by the original project
-requirements, since free software with similar functionality exists.
-However, the client felt that they had enough special requirements
-that a custom solution was necessary.  When management changed, the
-usage model also changed.  Now, instead of a Web interface,
-the client wanted what was essentially a text-message expander;
-they would text to one number and see that text broadcast to a
-variety of other numbers.  Students arranged for a phone number,
-identified and incorporated SMS receipt libraries, explored security
-issues, such as how to limit who could use the service, and designed
-a protocol to make it easy for the client to select which list the
-message was to be broadcast to.  Then management changed again.  And
-the new manager decided that free software did a good enough job.
+Through the years, management of our partner organizations has
+sometimes changed.  Often, the new manager has a very different
+view of what the project should do.  In one case, the initial project
+request was for a group text-messaging system with a Web interface.
+We'd been surprised by the original project requirements since
+free software with similar functionality exists.  However, the
+client felt that they had particular enough requirements that a custom
+solution was necessary.  When management changed, the usage model
+also changed.  Instead of a Web interface, the client now wanted
+what was essentially a text-message expander; they would text to
+one number and have that text broadcast to a variety of other
+numbers.  Students met the change with good nature; they arranged
+for a phone number, identified and incorporated SMS receipt libraries,
+explored security issues, such as how to limit who could use the
+service, and designed a protocol to make it easy for the client to
+select the recipient list.  Then management changed again.  And the
+new manager decided that free software did a good enough job.
 
-This was a situation that was particularly difficult to help students
-through.  Since the organization's personnel changed, 
-we could not emphasize that, 
-``Even though they're not using your software, you've helped the
-organization grow in understanding.'' After all, knowledge was lost or
-discarded with each change in management.
-Because similar
-free software existed, students did not think that there would be
-a benefit to releasing their work as free-and-open-source software.
-In the end, we focused on what the students had learned from the project
-and on ways they could share that knowledge with future students
-who might need to incorporate SMS in future projects.
+This situation was particularly challenging to help students through.
+Since the organization's personnel changed, we could not emphasize
+the broader benefits, ``Even though they're not using your software,
+you've helped the organization grow in understanding.'' Because
+similar free software existed, students did not think that there
+would be a benefit to releasing their work as free-and-open-source
+software.  In the end, we focused on what the students had learned
+from the project and on ways they could share that knowledge with
+future students who might need to incorporate SMS in future projects.
 
 \subsection{Uncooperative IT departments}
 
 Unfortunately, the SMS service was not the only instance in which
 students ended the project with a sense of disappointment.  We have
 had at least two instances in which students finished a project for
-a larger non-profit with its own IT department and then discovered that
-the IT staff was uncooperative in getting their own server up and
-running.  In one case, the software essentially disappeared after
-it was passed to the client's IT department.  They thanked us,
-but they appear not to have had the time or enthusiasm to install
-it.  In the second case, the IT staff agreed to provide a server
-and have the students install the software.  But they were
-slow in responding; they created the server relatively quickly, but
-seemed unwilling to open port 80 on that server.  After more than two
-months of back-and-forth conversations, 
-students were left with with insufficient time to release the software.
+a larger non-profit with its own IT department and then discovered
+that the IT staff was less uncooperative than we expected.  In one
+case, the software effectively disappeared after it was passed to
+the client's IT department.  They thanked us, but did not appear
+to have the time or enthusiasm to install it.  In the second case,
+the IT staff agreed to provide a server for the students to install
+software but took two-months of conversation to open port 80 on
+that server.  After more than two months of back-and-forth
+conversations, students were left with insufficient time to release
+the software.
 
-In both of these cases, we were able to help students focus on the
-positives.  While the projects did not get released, they had some
-confidence that their software could be used by others.  And, in
-both cases, it was clear that the regular meetings with the project
-teams had evolved partners' thinking about the projects.
+In both cases, we were able to help students focus on positive
+outcomes.  While the projects did not get released, they had some
+confidence that they would benefit others by releasing their software
+with an open license And, in both cases, it was clear that their
+regular client meetings had evolved partners' thinking about their
+projects and processes.
 
-We are still exploring ways to handle this broader issue of
-transitioning the project from our students to partner organizations.
-In most cases, using a common cloud platform,
-such as Heroku, seems to serve both the students
-and the partner organizations well.
+We continue to explore ways to handle this broader issue of
+transitioning the project to partner organizations.  In most cases,
+it appears that using a common cloud platform, such as Heroku,
+serves both the students and the partner organizations well.
 
